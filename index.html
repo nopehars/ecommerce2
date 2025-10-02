@@ -119,9 +119,25 @@
           </div>
 
           <!-- Icons -->
-          <div class="icons">
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-user"></i>
+          <div class="icons position-relative">
+            <!-- Tombol keranjang menuju cart.html -->
+            <a
+              href="cart.html"
+              class="text-dark position-relative"
+              style="text-decoration: none"
+            >
+              <i class="fa fa-shopping-cart position-relative">
+                <span
+                  id="cartCount"
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill"
+                  style="font-size: 0.7rem"
+                  >0</span
+                >
+              </i>
+            </a>
+
+            <!-- Icon user -->
+            <i class="fa fa-user ms-3"></i>
           </div>
         </div>
       </div>
