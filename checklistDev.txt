@@ -1,0 +1,59 @@
+🛠 Roadmap Next Step: E-Commerce Interaktif
+1. Frontend Interactivity (JavaScript)
+
+✅ Navbar interaktif (sticky, dropdown kategori).
+
+✅ Product card hover effect (zoom, quick view modal).
+
+🛒 Add to Cart button di tiap produk.
+
+🛍 Cart Page/Modal: bisa lihat item, jumlah, harga total.
+
+❤️ Wishlist/Favorites (optional).
+
+🔎 Search & Filter Produk (harga, kategori, brand).
+
+⭐ Interactive Review & Rating (bisa input rating bintang).
+
+2. Backend Setup
+
+Pakai PHP + MySQL (sesuai yang sudah sering kamu pakai):
+
+👤 Authentication: Login, Register, Logout.
+
+📦 Product Management (CRUD produk dari database).
+
+🛒 Cart & Checkout System (produk tersimpan di session/DB).
+
+💳 Payment Gateway Mockup (misalnya simulasi pembayaran pakai Midtrans/Stripe API nanti).
+
+3. Database Design (MySQL)
+
+Table dasar untuk e-commerce:
+
+users (data customer)
+
+products (nama, harga, stok, kategori, gambar)
+
+categories (casual, formal, dll)
+
+orders (id_user, total, status)
+
+order_items (produk yang masuk order)
+
+reviews (id_user, id_product, rating, komentar)
+
+4. Extra Features (Level Up 🚀)
+
+🔔 Toast notification saat tambah produk ke cart.
+
+📱 Responsive + Mobile friendly checkout flow.
+
+🔒 Login/Register pakai JWT (JSON Web Token) kalau mau belajar API.
+
+📈 Dashboard Admin buat kelola produk, kategori, & pesanan.
+
+👉 Saran saya, kita mulai dari cart system (frontend dulu dengan JavaScript) → supaya user bisa klik Add to Cart dan lihat ringkasannya.
+Baru setelah itu kita integrasi dengan PHP + MySQL biar data persistent (disimpan di database).
+
+Mau langsung kita mulai dari Add to Cart (frontend interactivity dengan JavaScript), coach? 🛒
