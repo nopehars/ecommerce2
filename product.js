@@ -7,20 +7,23 @@
  * - sort & filter reviews
  *************/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   // ---------- Helper ----------
   const $ = (selector, ctx = document) => ctx.querySelector(selector);
   const $$ = (selector, ctx = document) => Array.from(ctx.querySelectorAll(selector));
 
   // ---------- Gallery ----------
-  const thumbs = $$('#thumbs .thumb-btn');
-  const mainImg = $('#productImg');
-  thumbs.forEach((btn) => {
+  // Ambil elemen utama
+  const productImg = document.getElementById('productImg');
+  const thumbButtons = document.querySelectorAll('.thumb-btn');
+
+  thumbButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      thumbs.forEach((b) => b.classList.remove('active'));
+      const newSrc = btn.getAttribute('data-src');
+      productImg.src = newSrc;
+
+      thumbButtons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      const src = btn.getAttribute('data-src');
-      mainImg.src = src;
     });
   });
 
@@ -108,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sampleReviews = [
     { id: 'r1', name: 'Samantha D.', rating: 5, text: 'I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable.', date: '2023-08-14' },
-    { id: 'r2', name: 'Alex M.', rating: 5, text: 'The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch.', date: '2023-08-15' }
+    { id: 'r2', name: 'Alex M.', rating: 5, text: 'The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch.', date: '2023-08-15' },
   ];
 
   function loadReviews() {
